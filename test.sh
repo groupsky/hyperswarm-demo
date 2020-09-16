@@ -1,5 +1,6 @@
 #!/bin/bash
 
+timeout="10s"
 dc="docker-compose"
 dcl="$dc logs -f --no-color"
 
@@ -8,11 +9,11 @@ $dc up -d
 
 echo "Checking the logs"
 pids=()
-timeout 1 $dcl | grep -qxm1 "node1_1  |   + tcp incoming" &
+timeout $timeout $dcl | grep -qxm1 "node1_1  |   + tcp incoming" &
 pids+=($!)
-timeout 1 $dcl | grep -qxm1 "node2_1  |   + tcp incoming" &
+timeout $timeout $dcl | grep -qxm1 "node2_1  |   + tcp incoming" &
 pids+=($!)
-timeout 1 $dcl | grep -qEm2 "node3_1 +\| +\+ tcp .* local direct" &
+timeout $timeout $dcl | grep -qEm2 "node3_1 +\| +\+ tcp .* local direct" &
 pids+=($!)
 wait "${pids[@]}"
 res=$?
