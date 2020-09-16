@@ -1,0 +1,25 @@
+{
+  "name": "hyperswarm-demo",
+  "version": "1.0.0",
+  "description": "Demo project for testing hyperswarm connectivity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groupsky/hyperswarm-demo.git"
+  },
+  "keywords": [
+    "hyperswarm",
+    "demo",
+    "docker",
+    "docker-compose"
+  ],
+  "author": "Geno Roupsky <geno@roupsky.name> (https://github.com/groupsky)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/groupsky/hyperswarm-demo/issues"
+  },
+  "homepage": "https://github.com/groupsky/hyperswarm-demo#readme"
+}
