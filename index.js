@@ -8,6 +8,8 @@ const topic = crypto.createHash('sha256')
   .update(process.env.TOPIC || 'do me a favor and change me')
   .digest()
 
+console.log(`topic: `, topic.toString('hex'))
+
 const detailsToString = (details) => {
   const referrer = details.peer && details.peer.referrer ? `through ${details.peer.referrer.host}:${details.peer.referrer.port}` : 'direct'
   return `${details.client ? `${details.peer.host}:${details.peer.port} ${details.peer.local ? 'local' : ''} ${referrer}` : 'incoming'}`

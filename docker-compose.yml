@@ -1,0 +1,26 @@
+version: "2.0"
+services:
+
+  node1:
+    build: .
+    env_file:
+      - .env
+    networks:
+      - net1
+
+  node2:
+    build: .
+    env_file:
+      - .env
+    networks:
+      - net2
+
+  node3:
+    build: .
+    env_file:
+      - .env
+    network_mode: "host"
+
+networks:
+  net1:
+  net2:
