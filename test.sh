@@ -1,6 +1,6 @@
 #!/bin/bash
 
-timeout="10s"
+timeout="90s"
 dc="docker-compose"
 dcl="$dc logs -f --no-color"
 
