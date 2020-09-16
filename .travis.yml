@@ -1,0 +1,9 @@
+version: ~> 1.0
+os: linux
+dist: xenial
+language: node_js
+node_js: 14
+services:
+  - docker
+before_script: echo "TOPIC=test-hyperswarm-${TRAVIS_BUILD_ID}-${TRAVIS_JOB_ID}" > .env
+script: ./test.sh
