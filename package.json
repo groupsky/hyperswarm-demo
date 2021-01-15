@@ -25,6 +25,6 @@
   "homepage": "https://github.com/groupsky/hyperswarm-demo#readme",
   "dependencies": {
     "crypto": "^1.0.1",
-    "hyperswarm": "^2.15.2"
+    "hyperswarm": "^2.15.3"
   }
 }
