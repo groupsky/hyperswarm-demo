@@ -1,0 +1,26 @@
+version: 2
+updates:
+- package-ecosystem: docker
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "07:00"
+    timezone: Europe/Sofia
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: node
+    versions:
+    - 15.10.0.pre.slim
+    - 15.11.0.pre.slim
+    - 15.12.0.pre.slim
+    - 15.13.0.pre.slim
+    - 15.14.0.pre.slim
+    - 15.8.0.pre.slim
+    - 15.9.0.pre.slim
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "07:00"
+    timezone: Europe/Sofia
+  open-pull-requests-limit: 10
